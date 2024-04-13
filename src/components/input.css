@@ -1,0 +1,104 @@
+center {
+  margin-top: 8vh;
+}
+
+.title {
+  font-size: 3vw;
+  font-family: "Permanent Marker", cursive;
+  font-weight: bold;
+  color: #780000;
+}
+
+.input-container {
+  margin-top: 6vh;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+input {
+  font-size: 2vw;
+  margin-right: 2vw;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  color: #22577a;
+
+  &::placeholder {
+    color: #22577aa4;
+    font-weight: bold;
+  }
+}
+
+.task-btn {
+  font-size: 2vw;
+  margin-left: 2vw;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: auto;
+  background-color: white;
+  color: #22577a;
+  border-style: none;
+  font-weight: bold;
+  border: 2px solid #22577a;
+
+  &:hover {
+    background-color: #22577a;
+    color: white;
+    border: 2px solid #22577a;
+  }
+
+  &:active {
+    background-color: #ff6b35;
+  }
+}
+
+.task-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.task-container {
+  font-family: "Roboto Slab", serif;
+  display: grid;
+  grid-template-columns: 0.9fr 0.1fr;
+  border: 1px solid black;
+  width: 70vw;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.task-name {
+  font-size: 1.8vw;
+}
+
+.buttons-container {
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttons-container i {
+  font-size: 1.5vw;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.buttons-container #edit {
+  color: #c44900;
+  &:hover {
+    color: #ff6207;
+  }
+}
+.buttons-container #delete {
+  color: #9d0208;
+  &:hover {
+    color: #ff070f;
+  }
+}
