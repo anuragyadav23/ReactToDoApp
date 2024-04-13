@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import "./input.css";
 
 function InputSection({ addData }) {
@@ -9,9 +10,17 @@ function InputSection({ addData }) {
     setInputValue(inputValue);
   };
 
+  // writing code to handle the change in the date by the user
+  let [inputDate, setInputDate] = useState("");
+  let handleDateChange = (event) => {
+    inputDate = event.target.value;
+    setInputDate(inputDate);
+  };
+
   // here we will make the use of useState hook to change the value of our input
   let clearInput = () => {
     setInputValue("");
+    setInputDate("");
   };
 
   return (
@@ -22,10 +31,13 @@ function InputSection({ addData }) {
         value={inputValue}
         onChange={handleChange}
       ></input>
+
+      <input type="date" onChange={handleDateChange} value={inputDate}></input>
+
       <button
         className="task-btn"
         onClick={() => {
-          addData(inputValue);
+          addData(inputValue, inputDate);
           clearInput();
         }}
       >

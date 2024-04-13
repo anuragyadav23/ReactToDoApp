@@ -6,13 +6,18 @@ import { useState } from "react";
 function App() {
   // here we will make the use of useState hook in react to
   // lively reload our data
-  let [taskData, setTaskData] = useState([]);
+  let [taskData, setTaskData] = useState([
+    { taskName: "Task number One", date: "24-12-2023" },
+  ]);
 
   // now here we have to write a function to add the data into our array
-  let addData = (value) => {
+  let addData = (value, date) => {
     // now we have to add data to the list
+    let task = {};
     if (value != "") {
-      taskData.push(value);
+      task.taskName = value;
+      task.date = date;
+      taskData.push(task);
       setTaskData([...taskData]);
     }
   };
